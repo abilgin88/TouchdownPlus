@@ -3,27 +3,28 @@
 //  TouchdownPlus
 //
 //  Created by Abdullah Bilgin on 9/8/23.
+//
 
 import SwiftUI
 
-// Data
+// MARK: - Data
+let players: [Player] = Bundle.main.decode("player.json")
 
-// Color
+// MARK: - Colors
 let colorBackground: Color = Color("ColorBackground")
 let colorGray: Color = Color(UIColor.systemGray4)
 
-// Layout
+// MARK: - Layout
 
-// Ux
+// MARK: - UX
 
-// Api
+// MARK: - API
 
-// Image
+// MARK: - Images
 
-// Font
+// MARK: - Fonts
 
-// String
+// MARK: - Strings
 
-// Misc
+// MARK: - Miscellaneous
 
- 

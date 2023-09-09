@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
-                // MARK: - Navigation Bar
+                // Mark: - Navigation Bar
                 NavigationBarView()
                     .padding(.horizontal, 15)
                     .padding(.bottom)
@@ -29,12 +29,15 @@ struct ContentView: View {
                 
                 ScrollView(.vertical, showsIndicators: false, content: {
                     VStack(spacing: 0) {
-                        // MARK: - Featured Tab View
+                        // Mark: - Featured Tab View
                         FeaturedTabView()
                             .frame(minHeight: UIScreen.main.bounds.width / 1.475)
                             .padding(.vertical, 10)
                         
-                        // MARK: - Footer
+                        // Mark: - Category Grid View
+                        CategoryGridView()
+                        
+                        // Mark: - Footer
                         FooterView()
                             .padding(.horizontal)
                     } // End of VStack

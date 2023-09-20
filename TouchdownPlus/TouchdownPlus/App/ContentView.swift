@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
-                // Mark: - Navigation Bar
+                // MARK: - Navigation Bar
                 NavigationBarView()
                     .padding(.horizontal, 15)
                     .padding(.bottom)
@@ -29,15 +29,26 @@ struct ContentView: View {
                 
                 ScrollView(.vertical, showsIndicators: false, content: {
                     VStack(spacing: 0) {
-                        // Mark: - Featured Tab View
+                        // MARK: - Featured Tab View
                         FeaturedTabView()
                             .frame(minHeight: UIScreen.main.bounds.width / 1.475)
                             .padding(.vertical, 10)
                         
-                        // Mark: - Category Grid View
+                        // MARK: - Category Grid View
                         CategoryGridView()
                         
-                        // Mark: - Footer
+                        // MARK: - TitleView for Helmets
+                        TitleView(title: "Helmets")
+                        
+                        // MARK: - Product Grid
+                        LazyVGrid(columns: gridLayout, spacing: 15, content: {
+                            ForEach(products) { product in
+                                ProductItemView(product: product)
+                            } // End of Loop
+                        }) // End of LazyVGrid
+                        .padding(15)
+                        
+                        // MARK: - Footer
                         FooterView()
                             .padding(.horizontal)
                     } // End of VStack
